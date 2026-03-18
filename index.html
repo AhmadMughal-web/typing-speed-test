@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typify — Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-mark">⌘</span>
+        <span class="logo-text">Typify</span>
+      </div>
+      <div class="header-meta">Typing Speed Test</div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar" id="statsBar">
+      <div class="stat">
+        <span class="stat-val" id="wpmVal">—</span>
+        <span class="stat-key">WPM</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-val" id="accVal">—</span>
+        <span class="stat-key">Accuracy</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-val" id="timeVal">60</span>
+        <span class="stat-key">Seconds</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-val" id="errVal">0</span>
+        <span class="stat-key">Errors</span>
+      </div>
+    </div>
+
+    <!-- Time Selector -->
+    <div class="time-selector" id="timeSelector">
+      <span class="time-label">Duration</span>
+      <div class="time-chips">
+        <button class="time-chip" data-time="15">15s</button>
+        <button class="time-chip active" data-time="60">60s</button>
+        <button class="time-chip" data-time="120">120s</button>
+      </div>
+    </div>
+
+    <!-- Test Area -->
+    <main class="test-area">
+      <!-- Word Display -->
+      <div class="words-container" id="wordsContainer">
+        <div class="words" id="words"></div>
+      </div>
+
+      <!-- Input -->
+      <div class="input-wrap">
+        <input
+          type="text"
+          id="typeInput"
+          class="type-input"
+          placeholder="Click here and start typing..."
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          disabled
+        />
+        <div class="input-cursor" id="inputCursor"></div>
+      </div>
+
+      <!-- Start Hint -->
+      <p class="start-hint" id="startHint">Click the input above to begin</p>
+    </main>
+
+    <!-- Progress Bar -->
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Result Screen -->
+    <div class="result-screen hidden" id="resultScreen">
+      <div class="result-card">
+        <p class="result-label">Your Results</p>
+        <div class="result-main">
+          <div class="result-big">
+            <span class="result-num" id="finalWpm">0</span>
+            <span class="result-unit">WPM</span>
+          </div>
+        </div>
+        <div class="result-grid">
+          <div class="result-item">
+            <span class="result-item-val" id="finalAcc">0%</span>
+            <span class="result-item-key">Accuracy</span>
+          </div>
+          <div class="result-item">
+            <span class="result-item-val" id="finalChars">0</span>
+            <span class="result-item-key">Characters</span>
+          </div>
+          <div class="result-item">
+            <span class="result-item-val" id="finalErrors">0</span>
+            <span class="result-item-key">Errors</span>
+          </div>
+          <div class="result-item">
+            <span class="result-item-val" id="finalTime">0s</span>
+            <span class="result-item-key">Time</span>
+          </div>
+        </div>
+        <div class="result-grade" id="resultGrade"></div>
+        <button class="btn-restart" id="restartBtn">Try Again →</button>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls" id="controls">
+      <button class="btn-reset" id="resetBtn">↺ Reset</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
