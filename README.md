@@ -20,15 +20,4 @@ Just open `index.html` in your browser — no setup needed!
 - Vanilla JavaScript (no libraries)
 - DM Serif Display + DM Mono + Figtree fonts
 
----
 
-## GitHub Description
-```
-⌨️ Minimal typing speed test | WPM + accuracy tracker | 3 time modes | Vanilla JS | No dependencies
-```
-
-## Topics / Tags
-```
-typing-speed-test javascript html css vanilla-js wpm responsive minimal
-```
-# typing-speed-test
